@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TENET T7 — Подъедьте ближе</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#top">TENET<span>T7</span></a>
+    <nav class="nav-links">
+      <a href="#specs">Характеристики</a>
+      <a href="#trim">Комплектации</a>
+      <a href="#forms">Заявка</a>
+    </nav>
+    <a class="nav-cta" href="#forms">Оставить заявку</a>
+  </header>
+  <section class="hero" id="top">
+    <div class="hero-sticky">
+      <div class="hero-stage">
+        <img class="hero-person" src="person-scene.jpg" alt="Менеджер TENET" />
+        <img class="hero-car" id="heroCar" src="car-plate.jpg" alt="TENET T7" />
+        <div class="hero-vignette"></div>
+        <div class="hero-gradient"></div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Калужская сборка · 150 л.с. · 196 мм клиренс</p>
+        <h1>Листайте —<br />T7 подъезжает</h1>
+        <p class="lead">Машина выезжает справа и останавливается у человека.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#forms">Оставить контакты</a>
+        </div>
+      </div>
+      <div class="scroll-hint" id="scrollHint">Листайте, чтобы машина подъехала</div>
+    </div>
+  </section>
+  <section class="stats">
+    <div class="stat"><strong>150</strong><span>л.с. · 1.6 турбо</span></div>
+    <div class="stat"><strong>9,7</strong><span>сек до 100 км/ч</span></div>
+    <div class="stat"><strong>7,7</strong><span>л / 100 км</span></div>
+    <div class="stat"><strong>196</strong><span>мм клиренс</span></div>
+  </section>
+  <section class="specs" id="specs">
+    <div class="section-head"><p class="eyebrow">Модель</p><h2>Среднеразмерный кроссовер</h2></div>
+    <div class="spec-grid">
+      <article><h3>Силовой агрегат</h3><p>1.6 TGDI, 150 л.с., 275 Н·м. Бензин АИ-92. DCT7.</p></article>
+      <article><h3>Габариты</h3><p>4553 × 1862 × 1696 мм, база 2670 мм. Багажник 475–1500 л.</p></article>
+      <article><h3>Привод</h3><p>Передний или I-4WD. Клиренс 196 мм.</p></article>
+      <article><h3>Гарантия</h3><p>3 года / 100 000 км + 2 года поддержки. Калуга.</p></article>
+    </div>
+  </section>
+  <section class="trims" id="trim">
+    <div class="section-head"><p class="eyebrow">Цены</p><h2>Active и Prime</h2></div>
+    <div class="trim-cards">
+      <article class="trim"><p class="trim-name">Active 2WD</p><p class="trim-price">от 2 735 000 ₽</p></article>
+      <article class="trim featured"><p class="badge">Чаще выбирают</p><p class="trim-name">Prime 4WD</p><p class="trim-price">от 3 080 000 ₽</p></article>
+    </div>
+  </section>
+  <section class="forms" id="forms">
+    <div class="section-head"><p class="eyebrow">Связь</p><h2>Оставьте контакты</h2></div>
+    <div class="tabs">
+      <button class="tab is-active" data-tab="contact" type="button">Контакты</button>
+      <button class="tab" data-tab="tradein" type="button">Оценить трейд-ин</button>
+      <button class="tab" data-tab="credit" type="button">Посчитать кредит</button>
+    </div>
+    <form class="panel is-active" id="form-contact" name="contact">
+      <div class="row"><label>Имя<input name="name" required></label><label>Телефон<input name="phone" required type="tel"></label></div>
+      <label>Комментарий<textarea name="message" rows="3"></textarea></label>
+      <button class="btn primary" type="submit">Отправить заявку</button>
+    </form>
+    <form class="panel" id="form-tradein" name="tradein">
+      <div class="row"><label>Имя<input name="name" required></label><label>Телефон<input name="phone" required type="tel"></label></div>
+      <label>Марка и модель<input name="car" required></label>
+      <button class="btn primary" type="submit">Оценить автомобиль</button>
+    </form>
+    <form class="panel" id="form-credit" name="credit">
+      <div class="row"><label>Имя<input name="name" required></label><label>Телефон<input name="phone" required type="tel"></label></div>
+      <div class="row">
+        <label>Комплектация
+          <select name="trim" id="creditTrim">
+            <option value="2735000">Active 2WD</option>
+            <option value="3140000" selected>Prime 4WD</option>
+          </select>
+        </label>
+        <label>Первый взнос, ₽<input name="down" id="creditDown" type="number" value="500000"></label>
+      </div>
+      <div class="row">
+        <label>Срок, мес.
+          <select name="term" id="creditTerm">
+            <option value="36">36</option>
+            <option value="60" selected>60</option>
+          </select>
+        </label>
+        <label>Ставка %<input name="rate" id="creditRate" type="number" value="14.9" step="0.1"></label>
+      </div>
+      <div class="credit-result" id="creditResult">Платёж ≈ <strong>—</strong></div>
+      <button class="btn primary" type="submit">Получить расчёт</button>
+    </form>
+  </section>
+  <footer><span>TENET T7</span><span>GitHub Pages</span></footer>
+  <div class="toast" id="toast" hidden>Заявка принята</div>
+  <script src="app.js"></script>
+</body>
+</html>
